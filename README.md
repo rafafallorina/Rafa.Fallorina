@@ -1,7 +1,5 @@
 # Rafael Fallorina — UI Design Portfolio
 
-A responsive personal portfolio starter inspired by editorial web design and the urban-futurist graphic language of Zenless Zone Zero. This is an original fan-aesthetic direction, not an official game website.
-
 ## Preview locally
 1. Download or clone this repository.
 2. Open `index.html` in your browser.
