@@ -936,3 +936,49 @@ body.dark-mode .footer { background: #0e0e0e; }
   vertical-align: middle;
   margin: 0 8px;
 }
+
+/* FIX: SELECTED WORKS CAROUSEL */
+
+.project-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: 100%;
+  gap: 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.project-track::-webkit-scrollbar {
+  display: none;
+}
+
+.project-track .project-card {
+  display: block;
+  flex: 0 0 100% !important;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  grid-column: auto !important;
+  scroll-snap-align: start;
+}
+
+.project-track .project-visual {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .project-track .project-card {
+    flex-basis: 100% !important;
+    min-width: 100%;
+  }
+}
+
