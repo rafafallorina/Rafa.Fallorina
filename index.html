@@ -13,14 +13,47 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- LOADING SCREEN -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-top">
+        <span>RAFAEL FALLORINA</span>
+        <span>PORTFOLIO / 2026</span>
+      </div>
+
+      <div class="preloader-title">
+        DESIGNING<br>
+        <span>DIGITAL</span><br>
+        EXPERIENCES<span class="preloader-acid">.</span>
+      </div>
+
+      <div class="preloader-bottom">
+        <span>LOADING EXPERIENCE</span>
+        <span id="loadingPercent">00%</span>
+      </div>
+
+      <div class="preloader-bar">
+        <div class="preloader-progress" id="loadingProgress"></div>
+      </div>
+
+      <div class="preloader-footer">
+        <span>PLEASE WAIT</span>
+        <span>EST. 2026</span>
+      </div>
+    </div>
+  </div>
+
   <div class="site-shell">
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="Rafael home">RAFAEL<span>®</span></a>
+
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#work">WORK <i>01</i></a>
         <a href="#about">ABOUT <i>02</i></a>
         <a href="#contact">CONTACT <i>03</i></a>
       </nav>
+
       <div class="topbar-right">
         <span class="availability"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</span>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">◐</button>
@@ -28,19 +61,29 @@
       </div>
     </header>
 
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#work">WORK <span>01</span></a>
+      <a href="#about">ABOUT <span>02</span></a>
+      <a href="#contact">CONTACT <span>03</span></a>
+    </nav>
+
     <main id="top">
       <section class="hero section-pad">
         <div class="eyebrow"><span>INDEPENDENT DESIGNER</span><span class="eyebrow-line"></span><span>PHILIPPINES · 2026</span></div>
+
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="micro-label">DIGITAL DESIGN / INTERFACE / EXPERIENCE</p>
             <h1>DESIGNING<br><span class="outline-text">DIGITAL</span><br>EXPERIENCES<span class="acid">.</span></h1>
+
             <p class="intro">I'm Rafael Fallorina — a multidisciplinary visual designer with a background in graphic design, web design, branding, illustration, and digital production. I'm currently expanding my practice into UI/UX design and game interfaces, bringing years of creative experience into functional and engaging digital experiences.</p>
 
             <div class="hero-actions">
               <a class="image-action" href="#work" aria-label="Explore selected work">
                 <img src="assets/ui/Button_Explore_Work.png" alt="Explore selected work">
               </a>
+
               <a href="#contact" class="connect-link" aria-label="Go to contact section">
                 <img src="assets/ui/Button_Lets_Connect.png" alt="Let's Connect">
               </a>
@@ -49,6 +92,7 @@
 
           <aside class="hero-side" aria-label="Designer information">
             <div class="side-index"><span>PORTFOLIO FILE</span><strong>RF—001</strong></div>
+
             <div class="hero-art">
               <div class="art-cross cross-one">+</div>
               <div class="art-cross cross-two">+</div>
@@ -56,16 +100,28 @@
               <div class="art-stamp">IDEAS<br>IN MOTION</div>
               <div class="art-bottom"><span>CREATIVE<br>DEPARTMENT</span><b>EST. 2026</b></div>
             </div>
+
             <p class="side-note">A WORK IN PROGRESS.<br>ALWAYS LEARNING. ALWAYS BUILDING.</p>
           </aside>
         </div>
-        <div class="hero-footer"><span>SCROLL TO EXPLORE</span><span class="scroll-mark">↓</span><span>01 / 04</span></div>
+
+        <div class="hero-footer">
+          <span>SCROLL TO EXPLORE</span>
+          <span class="scroll-mark">↓</span>
+          <span>01 / 04</span>
+        </div>
       </section>
 
       <section class="ticker">
         <div class="ticker-track">
-          <span>DIGITAL DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b><span>BRANDING</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b><span>ADMINISTRATION</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b><span>PRINT DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
-          <span>DIGITAL DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b><span>BRANDING</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b><span>ADMINISTRATION</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b><span>PRINT DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>DIGITAL DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>BRANDING</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>ADMINISTRATION</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>PRINT DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>DIGITAL DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>BRANDING</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>ADMINISTRATION</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
+          <span>PRINT DESIGN</span><b><img src="assets/ui/Star.png" class="ticker-star" alt=""></b>
         </div>
       </section>
 
@@ -80,10 +136,8 @@
         </div>
 
         <div class="project-carousel">
-
           <div class="carousel-controls">
             <span class="carousel-count" id="carouselCount">01 / 05</span>
-
             <div class="carousel-arrows">
               <button class="carousel-arrow" id="prevProject" aria-label="Previous project">←</button>
               <button class="carousel-arrow" id="nextProject" aria-label="Next project">→</button>
@@ -140,7 +194,7 @@
               </div>
             </article>
 
-            <!-- WORK 04 - ANIMATED GIF -->
+            <!-- WORK 04 -->
             <article class="project-card">
               <a class="project-visual project-image" href="assets/work/Work_4.gif" target="_blank" rel="noopener" aria-label="View animated work 4">
                 <img class="work-image" src="assets/work/Work_4.gif" alt="Animated portfolio project 4">
@@ -171,30 +225,26 @@
                 <span class="project-number">005 ↗</span>
               </div>
             </article>
-
           </div>
 
-<div class="carousel-thumbnails" id="carouselThumbnails">
-  <button class="carousel-thumb active" data-slide="0" aria-label="View Work 1">
-    <img src="assets/work/Work_1.png" alt="Work 1 thumbnail">
-  </button>
+          <div class="carousel-thumbnails" id="carouselThumbnails">
+            <button class="carousel-thumb active" data-slide="0" aria-label="View Work 1">
+              <img src="assets/work/Work_1.png" alt="Work 1 thumbnail">
+            </button>
+            <button class="carousel-thumb" data-slide="1" aria-label="View Work 2">
+              <img src="assets/work/Work_2.png" alt="Work 2 thumbnail">
+            </button>
+            <button class="carousel-thumb" data-slide="2" aria-label="View Work 3">
+              <img src="assets/work/Work_3.png" alt="Work 3 thumbnail">
+            </button>
+            <button class="carousel-thumb" data-slide="3" aria-label="View Work 4">
+              <img src="assets/work/Work_4.gif" alt="Work 4 thumbnail">
+            </button>
+            <button class="carousel-thumb" data-slide="4" aria-label="View Work 5">
+              <img src="assets/work/Work_5.png" alt="Work 5 thumbnail">
+            </button>
+          </div>
 
-  <button class="carousel-thumb" data-slide="1" aria-label="View Work 2">
-    <img src="assets/work/Work_2.png" alt="Work 2 thumbnail">
-  </button>
-
-  <button class="carousel-thumb" data-slide="2" aria-label="View Work 3">
-    <img src="assets/work/Work_3.png" alt="Work 3 thumbnail">
-  </button>
-
-  <button class="carousel-thumb" data-slide="3" aria-label="View Work 4">
-    <img src="assets/work/Work_4.gif" alt="Work 4 thumbnail">
-  </button>
-
-  <button class="carousel-thumb" data-slide="4" aria-label="View Work 5">
-    <img src="assets/work/Work_5.png" alt="Work 5 thumbnail">
-  </button>
-</div>
           <div class="carousel-dots" id="carouselDots">
             <button class="carousel-dot active" aria-label="Go to project 1"></button>
             <button class="carousel-dot" aria-label="Go to project 2"></button>
@@ -202,67 +252,59 @@
             <button class="carousel-dot" aria-label="Go to project 4"></button>
             <button class="carousel-dot" aria-label="Go to project 5"></button>
           </div>
-
         </div>
       </section>
-      
-<!-- MORE WORK -->
-<section class="more-work-section" id="more-work">
-  <div class="section-heading">
-    <div>
-      <span class="section-label">02 / THE ARCHIVE</span>
-      <h2>MORE WORK<span class="accent">.</span></h2>
-    </div>
-    <span class="section-note">MORE EXPERIMENTS & PROJECTS</span>
-  </div>
 
-  <div class="more-work-grid">
+      <!-- MORE WORK -->
+      <section class="more-work-section" id="more-work">
+        <div class="more-work-inner">
+          <div class="section-heading">
+            <div>
+              <p class="micro-label">02 — THE ARCHIVE</p>
+              <h2>MORE WORK<span class="acid">.</span></h2>
+            </div>
+            <p class="section-aside">More experiments<br>and projects.</p>
+          </div>
 
-    <button class="more-work-item" data-type="image" data-src="assets/work/Work_6.png" aria-label="View Work 6">
-      <img src="assets/work/Work_6.png" alt="Work 6">
-      <span class="more-work-number">06</span>
-    </button>
+          <div class="more-work-grid">
+            <button class="more-work-item" data-type="image" data-src="assets/work/Work_6.png" aria-label="View Work 6">
+              <img src="assets/work/Work_6.png" alt="Work 6" loading="lazy">
+              <span class="more-work-number">06</span>
+            </button>
 
-    <button class="more-work-item" data-type="image" data-src="assets/work/Work_7.png" aria-label="View Work 7">
-      <img src="assets/work/Work_7.png" alt="Work 7">
-      <span class="more-work-number">07</span>
-    </button>
+            <button class="more-work-item" data-type="image" data-src="assets/work/Work_7.png" aria-label="View Work 7">
+              <img src="assets/work/Work_7.png" alt="Work 7" loading="lazy">
+              <span class="more-work-number">07</span>
+            </button>
 
-    <button class="more-work-item" data-type="image" data-src="assets/work/Work_8.png" aria-label="View Work 8">
-      <img src="assets/work/Work_8.png" alt="Work 8">
-      <span class="more-work-number">08</span>
-    </button>
+            <button class="more-work-item" data-type="image" data-src="assets/work/Work_8.png" aria-label="View Work 8">
+              <img src="assets/work/Work_8.png" alt="Work 8" loading="lazy">
+              <span class="more-work-number">08</span>
+            </button>
 
-    <button class="more-work-item" data-type="image" data-src="assets/work/Work_9.png" aria-label="View Work 9">
-      <img src="assets/work/Work_9.png" alt="Work 9">
-      <span class="more-work-number">09</span>
-    </button>
+            <button class="more-work-item" data-type="image" data-src="assets/work/Work_9.png" aria-label="View Work 9">
+              <img src="assets/work/Work_9.png" alt="Work 9" loading="lazy">
+              <span class="more-work-number">09</span>
+            </button>
 
-    <button class="more-work-item" data-type="image" data-src="assets/work/Work_10.png" aria-label="View Work 10">
-      <img src="assets/work/Work_10.png" alt="Work 10">
-      <span class="more-work-number">10</span>
-    </button>
+            <button class="more-work-item" data-type="image" data-src="assets/work/Work_10.png" aria-label="View Work 10">
+              <img src="assets/work/Work_10.png" alt="Work 10" loading="lazy">
+              <span class="more-work-number">10</span>
+            </button>
 
-    <button class="more-work-item" data-type="image" data-src="assets/work/Work_11.png" aria-label="View Work 11">
-      <img src="assets/work/Work_11.png" alt="Work 11">
-      <span class="more-work-number">11</span>
-    </button>
+            <button class="more-work-item" data-type="image" data-src="assets/work/Work_11.png" aria-label="View Work 11">
+              <img src="assets/work/Work_11.png" alt="Work 11" loading="lazy">
+              <span class="more-work-number">11</span>
+            </button>
 
-    <button class="more-work-item more-work-video" data-type="video" data-src="assets/work/Work_12.mp4" aria-label="Play Work 12">
-      <video src="assets/work/Work_12.mp4" muted playsinline preload="metadata"></video>
-      <span class="video-play-icon">▶</span>
-      <span class="more-work-number">12 / VIDEO</span>
-    </button>
-
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="work-lightbox" id="workLightbox" aria-hidden="true">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
-  <div class="lightbox-content" id="lightboxContent"></div>
-</div>
-
+            <button class="more-work-item more-work-video" data-type="video" data-src="assets/work/Work_12.mp4" aria-label="Play Work 12">
+              <video src="assets/work/Work_12.mp4" muted playsinline preload="metadata"></video>
+              <span class="video-play-icon">▶</span>
+              <span class="more-work-number">12 / VIDEO</span>
+            </button>
+          </div>
+        </div>
+      </section>
 
       <!-- ABOUT -->
       <section class="about section-pad" id="about">
@@ -295,6 +337,7 @@
       <section class="contact section-pad" id="contact">
         <p class="micro-label">03 — HAVE A PROJECT IN MIND?</p>
         <h2>LET'S MAKE<br>SOMETHING<br><span class="outline-text">MATTER.</span></h2>
+
         <div class="contact-bottom">
           <p>Interested in opportunities, collaborations<br>or simply talking design.</p>
           <a class="contact-button image-contact" href="mailto:your.email@example.com" aria-label="Get in touch">
@@ -309,6 +352,12 @@
       <span>DESIGNED & BUILT BY RAFAEL FALLORINA</span>
       <span>© 2026</span>
     </footer>
+  </div>
+
+  <!-- LIGHTBOX: OUTSIDE SITE SHELL SO IT IS NOT CLIPPED -->
+  <div class="work-lightbox" id="workLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
   </div>
 
   <script src="script.js"></script>
