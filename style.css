@@ -1031,19 +1031,21 @@ h2 { font-size: clamp(48px, 7vw, 92px); }
 
 .about-photo {
   width: 100%;
-  max-width: 260px;
   height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
-  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
   background: transparent;
+  aspect-ratio: auto;
 }
 
 .about-photo img {
+  display: block;
   width: 100%;
   height: auto;
+  max-height: none;
   object-fit: contain;
-  display: block;
+  object-position: center;
 }
 
 .about-lead {
