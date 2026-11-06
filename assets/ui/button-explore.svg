@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="352" height="88" viewBox="0 0 352 88">
+  <path d="M1 1H328L351 24V87H1Z" fill="#171717"/>
+  <path d="M328 1V24H351" fill="none" stroke="#E8FF45" stroke-width="2"/>
+  <text x="22" y="52" fill="#F3F0E8" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="1">EXPLORE WORK</text>
+  <path d="M294 31L315 44L294 57M315 44H278" fill="none" stroke="#E8FF45" stroke-width="3" stroke-linecap="square"/>
+</svg>
