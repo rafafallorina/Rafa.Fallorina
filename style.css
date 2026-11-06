@@ -465,23 +465,31 @@ h2 { font-size: clamp(48px, 7vw, 92px); }
   line-height: 1.6;
 }
 
-/* GET IN TOUCH IMAGE BUTTON - 528 x 180 */
+/* GET IN TOUCH IMAGE BUTTON */
 .contact-button.image-contact {
   display: inline-block;
-  width: 528px;
+  width: 260px;
   max-width: 100%;
   padding: 0;
-  background: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
   line-height: 0;
   transition: transform .2s ease;
 }
+
 .contact-button.image-contact:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
+
 .contact-button.image-contact img {
   display: block;
   width: 100%;
   height: auto;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .footer {
