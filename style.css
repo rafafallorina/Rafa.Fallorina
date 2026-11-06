@@ -651,4 +651,17 @@ body.dark-mode .footer { background: #0e0e0e; }
     max-height: 350px;
   }
 }
+/* LET'S CONNECT STICKER */
+.connect-link {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-left: -18px;
+  line-height: 0;
+}
 
+.connect-link img {
+  display: block;
+  width: 180px;
+  height: auto;
+}
