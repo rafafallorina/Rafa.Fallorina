@@ -682,3 +682,13 @@ body.dark-mode .footer { background: #0e0e0e; }
   width: 140px;
   height: auto;
 }
+
+/* TICKER STAR IMAGE */
+.ticker-star {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 8px;
+}
