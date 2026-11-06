@@ -79,87 +79,108 @@
           <p class="section-aside">A collection of explorations, concepts<br>and things I'm learning to make.</p>
         </div>
 
-        <div class="project-grid">
+        <div class="project-carousel">
 
-          <!-- WORK 01 -->
-          <article class="project-card project-wide">
-            <a class="project-visual project-image" href="assets/work/Work_1.png" target="_blank" rel="noopener" aria-label="View work 1">
-              <img class="work-image" src="assets/work/Work_1.png" alt="Portfolio project 1">
-              <span class="visual-code">SELECTED WORK / 001</span>
-              <span class="visual-caption">PROJECT 01 ↗</span>
-            </a>
-            <div class="project-meta">
-              <div>
-                <h3>PROJECT 01</h3>
-                <p>Selected work</p>
-              </div>
-              <span class="project-number">001 ↗</span>
-            </div>
-          </article>
+          <div class="carousel-controls">
+            <span class="carousel-count" id="carouselCount">01 / 05</span>
 
-          <!-- WORK 02 -->
-          <article class="project-card">
-            <a class="project-visual project-image" href="assets/work/Work_2.png" target="_blank" rel="noopener" aria-label="View work 2">
-              <img class="work-image" src="assets/work/Work_2.png" alt="Portfolio project 2">
-              <span class="visual-code">SELECTED WORK / 002</span>
-              <span class="visual-caption">PROJECT 02 ↗</span>
-            </a>
-            <div class="project-meta">
-              <div>
-                <h3>PROJECT 02</h3>
-                <p>Selected work</p>
-              </div>
-              <span class="project-number">002 ↗</span>
+            <div class="carousel-arrows">
+              <button class="carousel-arrow" id="prevProject" aria-label="Previous project">←</button>
+              <button class="carousel-arrow" id="nextProject" aria-label="Next project">→</button>
             </div>
-          </article>
+          </div>
 
-          <!-- WORK 03 -->
-          <article class="project-card">
-            <a class="project-visual project-image" href="assets/work/Work_3.png" target="_blank" rel="noopener" aria-label="View work 3">
-              <img class="work-image" src="assets/work/Work_3.png" alt="Portfolio project 3">
-              <span class="visual-code">SELECTED WORK / 003</span>
-              <span class="visual-caption">PROJECT 03 ↗</span>
-            </a>
-            <div class="project-meta">
-              <div>
-                <h3>PROJECT 03</h3>
-                <p>Selected work</p>
-              </div>
-              <span class="project-number">003 ↗</span>
-            </div>
-          </article>
+          <div class="project-track" id="projectTrack">
 
-          <!-- WORK 04 - ANIMATED GIF -->
-          <article class="project-card">
-            <a class="project-visual project-image" href="assets/work/Work_4.gif" target="_blank" rel="noopener" aria-label="View animated work 4">
-              <img class="work-image" src="assets/work/Work_4.gif" alt="Animated portfolio project 4">
-              <span class="visual-code">SELECTED WORK / 004</span>
-              <span class="visual-caption">ANIMATED PROJECT 04 ↗</span>
-            </a>
-            <div class="project-meta">
-              <div>
-                <h3>PROJECT 04</h3>
-                <p>Motion / Animated work</p>
+            <!-- WORK 01 -->
+            <article class="project-card project-wide">
+              <a class="project-visual project-image" href="assets/work/Work_1.png" target="_blank" rel="noopener" aria-label="View work 1">
+                <img class="work-image" src="assets/work/Work_1.png" alt="Portfolio project 1">
+                <span class="visual-code">SELECTED WORK / 001</span>
+                <span class="visual-caption">PROJECT 01 ↗</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <h3>PROJECT 01</h3>
+                  <p>Selected work</p>
+                </div>
+                <span class="project-number">001 ↗</span>
               </div>
-              <span class="project-number">004 ↗</span>
-            </div>
-          </article>
+            </article>
 
-          <!-- WORK 05 -->
-          <article class="project-card">
-            <a class="project-visual project-image" href="assets/work/Work_5.png" target="_blank" rel="noopener" aria-label="View work 5">
-              <img class="work-image" src="assets/work/Work_5.png" alt="Portfolio project 5">
-              <span class="visual-code">SELECTED WORK / 005</span>
-              <span class="visual-caption">PROJECT 05 ↗</span>
-            </a>
-            <div class="project-meta">
-              <div>
-                <h3>PROJECT 05</h3>
-                <p>Selected work</p>
+            <!-- WORK 02 -->
+            <article class="project-card">
+              <a class="project-visual project-image" href="assets/work/Work_2.png" target="_blank" rel="noopener" aria-label="View work 2">
+                <img class="work-image" src="assets/work/Work_2.png" alt="Portfolio project 2">
+                <span class="visual-code">SELECTED WORK / 002</span>
+                <span class="visual-caption">PROJECT 02 ↗</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <h3>PROJECT 02</h3>
+                  <p>Selected work</p>
+                </div>
+                <span class="project-number">002 ↗</span>
               </div>
-              <span class="project-number">005 ↗</span>
-            </div>
-          </article>
+            </article>
+
+            <!-- WORK 03 -->
+            <article class="project-card">
+              <a class="project-visual project-image" href="assets/work/Work_3.png" target="_blank" rel="noopener" aria-label="View work 3">
+                <img class="work-image" src="assets/work/Work_3.png" alt="Portfolio project 3">
+                <span class="visual-code">SELECTED WORK / 003</span>
+                <span class="visual-caption">PROJECT 03 ↗</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <h3>PROJECT 03</h3>
+                  <p>Selected work</p>
+                </div>
+                <span class="project-number">003 ↗</span>
+              </div>
+            </article>
+
+            <!-- WORK 04 - ANIMATED GIF -->
+            <article class="project-card">
+              <a class="project-visual project-image" href="assets/work/Work_4.gif" target="_blank" rel="noopener" aria-label="View animated work 4">
+                <img class="work-image" src="assets/work/Work_4.gif" alt="Animated portfolio project 4">
+                <span class="visual-code">SELECTED WORK / 004</span>
+                <span class="visual-caption">ANIMATED PROJECT 04 ↗</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <h3>PROJECT 04</h3>
+                  <p>Motion / Animated work</p>
+                </div>
+                <span class="project-number">004 ↗</span>
+              </div>
+            </article>
+
+            <!-- WORK 05 -->
+            <article class="project-card">
+              <a class="project-visual project-image" href="assets/work/Work_5.png" target="_blank" rel="noopener" aria-label="View work 5">
+                <img class="work-image" src="assets/work/Work_5.png" alt="Portfolio project 5">
+                <span class="visual-code">SELECTED WORK / 005</span>
+                <span class="visual-caption">PROJECT 05 ↗</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <h3>PROJECT 05</h3>
+                  <p>Selected work</p>
+                </div>
+                <span class="project-number">005 ↗</span>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" aria-label="Go to project 1"></button>
+            <button class="carousel-dot" aria-label="Go to project 2"></button>
+            <button class="carousel-dot" aria-label="Go to project 3"></button>
+            <button class="carousel-dot" aria-label="Go to project 4"></button>
+            <button class="carousel-dot" aria-label="Go to project 5"></button>
+          </div>
 
         </div>
       </section>
@@ -191,6 +212,7 @@
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section class="contact section-pad" id="contact">
         <p class="micro-label">03 — HAVE A PROJECT IN MIND?</p>
         <h2>LET'S MAKE<br>SOMETHING<br><span class="outline-text">MATTER.</span></h2>
