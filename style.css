@@ -661,7 +661,7 @@ h2 { font-size: clamp(48px, 7vw, 92px); }
 /* ABOUT PORTRAIT */
 
 .about-photo {
-  width: 80%;
+  width: 100%;
   max-width: 260px;
   height: auto;
   aspect-ratio: auto;
