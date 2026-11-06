@@ -651,7 +651,7 @@ h2 { font-size: clamp(48px, 7vw, 92px); }
 /* ABOUT PORTRAIT */
 
 .about-photo {
-  width: 60%;
+  width: 80%;
   max-width: 260px;
   aspect-ratio: 4 / 5;
   margin: 0;
@@ -838,7 +838,7 @@ body.dark-mode .footer { background: #0e0e0e; }
   }
 
   .about-photo {
-    width: 60%;
+    width: 68%;
     max-width: 220px;
   }
 
@@ -979,6 +979,61 @@ body.dark-mode .footer { background: #0e0e0e; }
   .project-track .project-card {
     flex-basis: 100% !important;
     min-width: 100%;
+  }
+}
+
+/* CAROUSEL THUMBNAILS */
+
+.carousel-thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  overflow-x: auto;
+  padding: 5px 2px;
+}
+
+.carousel-thumb {
+  flex: 0 0 90px;
+  width: 90px;
+  height: 65px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.25s ease, transform 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.carousel-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-thumb:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}
+
+.carousel-thumb.active {
+  opacity: 1;
+  border: 2px solid var(--ink);
+}
+
+@media (max-width: 760px) {
+  .carousel-thumbnails {
+    justify-content: flex-start;
+    gap: 9px;
+  }
+
+  .carousel-thumb {
+    flex-basis: 75px;
+    width: 75px;
+    height: 55px;
   }
 }
 
