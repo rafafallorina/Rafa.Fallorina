@@ -656,12 +656,12 @@ body.dark-mode .footer { background: #0e0e0e; }
   display: inline-block;
   position: relative;
   z-index: 2;
-  margin-left: -18px;
+  margin-left: -26px;
   line-height: 0;
 }
 
 .connect-link img {
   display: block;
-  width: 90px;
+  width: 110px;
   height: auto;
 }
