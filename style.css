@@ -413,9 +413,9 @@ h2 { font-size: clamp(48px, 7vw, 92px); }
 }
 .about .section-heading { align-items: start; }
 .about-sticker {
-  width: 105px;
-  height: 105px;
-  flex: 0 0 105px;
+  width: 75px;
+  height: 75px;
+  flex: 0 0 75px;
   transform: rotate(9deg);
 }
 .about-sticker img {
@@ -571,7 +571,7 @@ body.dark-mode .footer { background: #0e0e0e; }
     gap: 38px;
     margin-top: 35px;
   }
-  .about-sticker { width: 80px; height: 80px; flex-basis: 80px; }
+  .about-sticker { width: 60px; height: 60px; flex-basis: 60px; }
 
   .contact { padding-top: 80px; padding-bottom: 60px; }
   .contact-bottom {
@@ -655,13 +655,14 @@ body.dark-mode .footer { background: #0e0e0e; }
 .connect-link {
   display: inline-block;
   position: relative;
-  z-index: 2;
-  margin-left: -36px;
+  z-index: 3;
+  margin-left: -12px;
+  margin-top: 10px;
   line-height: 0;
 }
 
 .connect-link img {
   display: block;
-  width: 120px;
+  width: 90px;
   height: auto;
 }
