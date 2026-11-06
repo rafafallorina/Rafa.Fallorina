@@ -1,13 +1,11 @@
 
 /* THEME TOGGLE */
-
 const themeToggle = document.getElementById("themeToggle");
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
 themeToggle?.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
-
   const isDark = document.body.classList.contains("dark-mode");
 
   themeToggle.setAttribute(
@@ -17,7 +15,6 @@ themeToggle?.addEventListener("click", () => {
 });
 
 /* MOBILE NAVIGATION */
-
 menuToggle?.addEventListener("click", () => {
   if (!mobileMenu) return;
 
@@ -39,7 +36,6 @@ mobileMenu?.querySelectorAll("a").forEach((link) => {
 });
 
 /* SELECTED WORKS CAROUSEL */
-
 const projectTrack = document.getElementById("projectTrack");
 
 if (projectTrack) {
@@ -49,9 +45,15 @@ if (projectTrack) {
 
   const prevButton = document.getElementById("prevProject");
   const nextButton = document.getElementById("nextProject");
+
   const dots = Array.from(
     document.querySelectorAll(".carousel-dot")
   );
+
+  const thumbnails = Array.from(
+    document.querySelectorAll(".carousel-thumb")
+  );
+
   const counter = document.getElementById("carouselCount");
 
   let currentProject = 0;
@@ -70,6 +72,16 @@ if (projectTrack) {
 
       dot.classList.toggle("active", isActive);
       dot.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+
+    thumbnails.forEach((thumbnail, index) => {
+      const isActive = index === currentProject;
+
+      thumbnail.classList.toggle("active", isActive);
+      thumbnail.setAttribute(
+        "aria-current",
+        isActive ? "true" : "false"
+      );
     });
   }
 
@@ -101,6 +113,13 @@ if (projectTrack) {
 
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
+      goToProject(index);
+    });
+  });
+
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+      const index = Number(thumbnail.dataset.slide);
       goToProject(index);
     });
   });
