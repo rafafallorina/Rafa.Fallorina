@@ -153,3 +153,57 @@ if (projectTrack) {
 
   updateCarousel();
 }
+
+/* MORE WORK LIGHTBOX */
+
+const workLightbox = document.getElementById("workLightbox");
+const lightboxContent = document.getElementById("lightboxContent");
+const lightboxClose = document.getElementById("lightboxClose");
+
+document.querySelectorAll(".more-work-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const type = item.dataset.type;
+    const src = item.dataset.src;
+
+    lightboxContent.innerHTML = "";
+
+    if (type === "video") {
+      const video = document.createElement("video");
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      lightboxContent.appendChild(video);
+    } else {
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = "Selected work";
+      lightboxContent.appendChild(image);
+    }
+
+    workLightbox.classList.add("open");
+    workLightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+function closeWorkLightbox() {
+  workLightbox.classList.remove("open");
+  workLightbox.setAttribute("aria-hidden", "true");
+  lightboxContent.innerHTML = "";
+  document.body.style.overflow = "";
+}
+
+lightboxClose.addEventListener("click", closeWorkLightbox);
+
+workLightbox.addEventListener("click", (event) => {
+  if (event.target === workLightbox) {
+    closeWorkLightbox();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && workLightbox.classList.contains("open")) {
+    closeWorkLightbox();
+  }
+});
