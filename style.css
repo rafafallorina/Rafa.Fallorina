@@ -450,7 +450,7 @@ h2 { font-size: clamp(48px, 7vw, 92px); }
 
 /* ABOUT PORTRAIT */
 .about-photo {
-  width: 100%;
+  width: 30%;
   max-width: 260px;
   aspect-ratio: 4 / 5;
   margin: 0;
@@ -612,7 +612,7 @@ body.dark-mode .footer { background: #0e0e0e; }
     margin-top: 35px;
   }
   .about-photo {
-    width: 68%;
+    width: 30%;
     max-width: 220px;
   }
   .about-sticker { width: 60px; height: 60px; flex-basis: 60px; }
