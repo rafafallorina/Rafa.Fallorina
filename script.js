@@ -1,4 +1,3 @@
-
 /* LOADING SCREEN */
 
 const preloader = document.getElementById("preloader");
@@ -276,6 +275,131 @@ function openWorkLightbox(type, src) {
   workLightbox.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 }
+
+/* MORE WORKS PRINT CAROUSEL */
+
+const printTrack = document.getElementById("printTrack");
+
+if (printTrack) {
+  const printCards = Array.from(
+    printTrack.querySelectorAll(".print-card")
+  );
+
+  const printPrev = document.getElementById("prevPrint");
+  const printNext = document.getElementById("nextPrint");
+  const printCounter = document.getElementById("printCarouselCount");
+
+  const printDots = Array.from(
+    document.querySelectorAll(".print-dot")
+  );
+
+  const printThumbnails = Array.from(
+    document.querySelectorAll(".print-thumb")
+  );
+
+  let currentPrint = 0;
+  let printScrollTimer;
+
+  function updatePrintCarousel() {
+    if (printCounter) {
+      printCounter.textContent =
+        String(currentPrint + 1).padStart(2, "0") +
+        " / " +
+        String(printCards.length).padStart(2, "0");
+    }
+
+    printDots.forEach((dot, index) => {
+      const active = index === currentPrint;
+
+      dot.classList.toggle("active", active);
+      dot.setAttribute("aria-current", active ? "true" : "false");
+    });
+
+    printThumbnails.forEach((thumbnail, index) => {
+      const active = index === currentPrint;
+
+      thumbnail.classList.toggle("active", active);
+      thumbnail.setAttribute("aria-current", active ? "true" : "false");
+    });
+  }
+
+  function goToPrint(index) {
+    currentPrint = Math.max(
+      0,
+      Math.min(index, printCards.length - 1)
+    );
+
+    const targetPosition =
+      printCards[currentPrint].offsetLeft -
+      printCards[0].offsetLeft;
+
+    printTrack.scrollTo({
+      left: targetPosition,
+      behavior: "smooth"
+    });
+
+    updatePrintCarousel();
+  }
+
+  printPrev?.addEventListener("click", () => {
+    goToPrint(currentPrint - 1);
+  });
+
+  printNext?.addEventListener("click", () => {
+    goToPrint(currentPrint + 1);
+  });
+
+  printDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => goToPrint(index));
+  });
+
+  printThumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+      goToPrint(Number(thumbnail.dataset.printSlide));
+    });
+  });
+
+  printTrack.addEventListener("scroll", () => {
+    window.clearTimeout(printScrollTimer);
+
+    printScrollTimer = window.setTimeout(() => {
+      const trackPosition = printTrack.scrollLeft;
+
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      printCards.forEach((card, index) => {
+        const distance = Math.abs(
+          card.offsetLeft -
+          printCards[0].offsetLeft -
+          trackPosition
+        );
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      currentPrint = closestIndex;
+      updatePrintCarousel();
+    }, 80);
+  });
+
+  printTrack.querySelectorAll(".print-visual").forEach((button) => {
+    button.addEventListener("click", () => {
+      const src = button.dataset.src;
+
+      if (src) {
+        openWorkLightbox("image", src);
+      }
+    });
+  });
+
+  updatePrintCarousel();
+}
+
+/* EXISTING MORE WORK GRID LIGHTBOX */
 
 document.querySelectorAll(".more-work-item").forEach((item) => {
   item.addEventListener("click", () => {
